@@ -21,12 +21,19 @@ export const Demo = () => {
               <Link to={"/single/" + item.id}>Link to: {item.title} </Link>
               
               <p>Open file ./store.js to see the global store that contains and updates the list of colors</p>
+
+
+              <p>El mensaje de los estudiantes : { store.message } </p>
               
               <button className="btn btn-success" 
-                onClick={() => dispatch({
-                  type: "add_task", 
-                  payload: { id: item.id, color: '#ffa500' }
-                })}>
+                onClick={() => 
+
+                  dispatch({
+                    type: "add_task", 
+                    payload: { id: item.id, color: '#ffa500' }
+                  })
+                
+                }>
                 Change Color
               </button>
             </li>

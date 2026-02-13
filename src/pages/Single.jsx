@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";  // To use link for navigati
 import PropTypes from "prop-types";  // To define prop types for this component
 import rigoImageUrl from "../assets/img/rigo-baby.jpg"  // Import an image asset
 import useGlobalReducer from "../hooks/useGlobalReducer";  // Import a custom hook for accessing the global state
+import { useEffect } from "react";
 
 // Define and export the Single component which displays individual item details.
 export const Single = props => {
@@ -19,6 +20,9 @@ export const Single = props => {
       <h1 className="display-4">Todo: {singleTodo?.title}</h1>
       <hr className="my-4" />  {/* A horizontal rule for visual separation. */}
 
+      <h1>El ID de este elemento es {theId}</h1>
+
+      <p>El nombre del usuario es : { store.userName } </p>
       {/* A Link component acts as an anchor tag but is used for client-side routing to prevent page reloads. */}
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
